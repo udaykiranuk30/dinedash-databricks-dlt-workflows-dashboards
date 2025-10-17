@@ -1,0 +1,19 @@
+resources:
+  pipelines:
+    pipeline_dinedash_udaykirank_etl:
+      name: DineDash_udayKiranK_ETL
+      clusters:
+        - label: default
+          policy_id: E06216CAA00010F6
+          autoscale:
+            min_workers: 0
+            max_workers: 0
+            mode: ENHANCED
+        - label: maintenance
+          policy_id: E06216CAA00010F6
+      libraries:
+        - notebook:
+            path: /Users/uday.krishnamurthy@xxxxxxxxx.com/DineDash_DLT_DataAnalysis_Final_Casestudy_with_DashboardQueries_udaykiran.k/DineDash_DLT
+      schema: dinedash_udaykirank_etl
+      development: true
+      photon: true
