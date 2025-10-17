@@ -1,0 +1,21 @@
+--Make sure you add correct pipeline and also publish the dashboard.
+
+resources:
+  jobs:
+    DineDash_udaykirank_Job_Workflow:
+      name: DineDash_udaykirank_Job_Workflow
+      tasks:
+        - task_key: DineDash_ETL
+          pipeline_task:
+            pipeline_id: de0daf24-2daa-4df4-8286-e347ae2d4fec
+            full_refresh: true
+        - task_key: DineDash_Dashboard
+          depends_on:
+            - task_key: DineDash_ETL
+          dashboard_task:
+            subscription: {}
+            warehouse_id: f868a94541d93614
+            dashboard_id: 01f084b8c48b1f59bed04b9cab192f0d
+      queue:
+        enabled: true
+      performance_target: STANDARD
