@@ -51,10 +51,10 @@ DineDash will track the following key attributes across different tables:
 • phone: 
 • rating:
 
-##Data Model
+## Data Model
 <img width="631" height="457" alt="image" src="https://github.com/user-attachments/assets/43b164e3-5d0a-4f62-8373-00828d30434e" />
 
-##Process Flow
+## Process Flow
 
 Pipeline Creation using DLT (Medallion Architecture):
 Designed a Delta Live Tables (DLT) pipeline in SQL following the Medallion Architecture (Bronze → Silver → Gold).
